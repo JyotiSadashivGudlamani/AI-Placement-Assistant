@@ -1,0 +1,291 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f7f8fc;
+  color: #20243a;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #171b32;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 55px;
+}
+
+.brand h2 {
+  font-size: 19px;
+}
+
+.brand-icon {
+  background: #7565ed;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.sidebar-label {
+  color: #969ab1;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.sidebar-item {
+  padding: 13px;
+  border-radius: 9px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.sidebar-item.active {
+  background: #343958;
+}
+
+.sidebar-info {
+  background: #252a48;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 35px;
+}
+
+.sidebar-info h3 {
+  font-size: 14px;
+}
+
+.sidebar-info p {
+  color: #b8bdd1;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  color: #969ab1;
+  font-size: 11px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.topbar {
+  height: 85px;
+  background: white;
+  border-bottom: 1px solid #e8eaf0;
+  padding: 15px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.topbar p {
+  color: #85899b;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.status {
+  font-size: 12px;
+  color: #555b72;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  background: #20b981;
+  border-radius: 50%;
+}
+
+.chat-area {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 35px;
+}
+
+.welcome-section {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+
+.welcome-icon {
+  width: 55px;
+  height: 55px;
+  background: #ece9ff;
+  color: #7160e8;
+  border-radius: 17px;
+  display: grid;
+  place-items: center;
+  margin: auto;
+  font-size: 30px;
+}
+
+.welcome-section h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  color: #85899b;
+  font-size: 14px;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.message-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.message-row.user {
+  flex-direction: row-reverse;
+}
+
+.message-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  background: #ece9ff;
+  color: #7160e8;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.user .message-avatar {
+  background: #dff5eb;
+  color: #16855b;
+}
+
+.message-bubble {
+  max-width: 75%;
+  padding: 14px 17px;
+  background: white;
+  border: 1px solid #e8eaf0;
+  border-radius: 5px 15px 15px 15px;
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.user .message-bubble {
+  background: #7160e8;
+  color: white;
+  border: none;
+  border-radius: 15px 5px 15px 15px;
+}
+
+.typing {
+  color: #777;
+  font-style: italic;
+}
+
+.input-section {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px 35px 25px;
+}
+
+.chat-form {
+  display: flex;
+  gap: 12px;
+  background: white;
+  border: 1px solid #e1e3ec;
+  border-radius: 13px;
+  padding: 9px;
+}
+
+.chat-form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  min-width: 0;
+}
+
+.chat-form button {
+  border: none;
+  background: #7160e8;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.chat-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input-note {
+  text-align: center;
+  color: #9699a8;
+  font-size: 11px;
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    display: none;
+  }
+
+  .topbar {
+    padding: 15px;
+  }
+
+  .chat-area {
+    padding: 20px 15px;
+  }
+
+  .input-section {
+    padding: 15px;
+  }
+
+  .welcome-section h1 {
+    font-size: 21px;
+  }
+
+  .message-bubble {
+    max-width: 85%;
+  }
+}
